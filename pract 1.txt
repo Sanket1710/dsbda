@@ -1,0 +1,60 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv('weatherAUS.csv')
+
+df.head()
+
+df.info()
+
+df.describe(include="all")
+
+df.describe(exclude="object")
+
+print(df.median())
+
+print(df.std())
+
+df.shape
+
+df.tail(5)
+
+df.index
+
+df.dtypes
+
+df.iloc[5]
+
+df.iloc[0:5]
+
+df.iloc[::5]
+
+df.iloc[:,:5]
+
+df.iloc[2:,:4]
+
+df.columns.values
+
+df['Location']
+
+df.sort_index(axis=1,ascending=False)
+
+df.sort_values(by='Location')
+
+df.iloc[:4,:5]
+
+df["Location"].iloc[4]
+
+df[df.columns[4:7]].iloc[2:4]
+
+df.isnull().sum()
+
+df.dtypes
+
+df["RISK_MM"]=df["RISK_MM"].astype("int")
+
+df.dtypes
+
+df.groupby(['Location'])['Date'].apply(lambda x:x.isnull().sum())
