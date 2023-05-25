@@ -1,0 +1,26 @@
+tar -xcf spark-3.2.1-bin-hadoop3.2.tgz
+
+gedit -/.bashrc
+
+whoami(check username)
+
+SPARK_HOWE=/home/username/spark/spark-3.2.1-bin-hadoop3.2
+export PATH=$PATH_HOME/bin:$SPARK_HOME/sbin
+
+source ~/.bashrc
+
+spark-shell
+
+object Sample{  
+  def main(args:Array[String]){  
+    var num:Int = 0;
+    
+    print("Enter number:")
+    num=scala.io.StdIn.readInt()
+    
+    if(num>=0)
+      println("Number is POSITIVE")
+    else
+      println("Number is NEGATIVE")
+  }
+}
